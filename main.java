@@ -60,7 +60,6 @@ class Main {
 
         System.out.println("Введите математическое выражение:");
 
-        // Один раз считываем ввод
         String input = scanner.nextLine();
 
         try {
