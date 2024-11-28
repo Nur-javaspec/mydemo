@@ -58,24 +58,18 @@ class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Введите математическое выражение (или 'exit' для завершения):");
+        System.out.println("Введите математическое выражение:");
 
-        while (true) {
-            System.out.print("Ввод: ");
-            String input = scanner.nextLine();
+        // Один раз считываем ввод
+        String input = scanner.nextLine();
 
-            if (input.equalsIgnoreCase("exit")) {
-                System.out.println("Завершение программы.");
-                break;
-            }
-
-            try {
-                String result = calc(input);
-                System.out.println("Результат: " + result);
-            } catch (Exception e) {
-                System.out.println(e.getMessage());
-            }
+        try {
+            String result = calc(input);
+            System.out.println("Результат: " + result);
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
         }
+
         scanner.close();
     }
 }
